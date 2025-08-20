@@ -1,6 +1,18 @@
 # information-security-h1
 Second homework task for Information Security ICI002AS2AE-3007
 
+# Table of contents
+1. [Threat modeling](#threat-modeling---summaries)  
+    1.1 [Braiterman](#braiterman)  
+    1.2 [Shostack](#shostack)  
+    1.3 [OWASP](#owasp)  
+2. [Infosec Scene](#infosec-scene)  
+    2.1 [Summary](#small-summary)  
+    2.2 [Description](#summary-per-topic)
+3. [Security Hygiene](#security-hygiene)
+4. [Make-belief boogie-man](#make-belief-boogie-man)
+5. [References](#references)
+
 # Threat Modeling - summaries
 ## Braiterman
 - Threat modeling highlights security and privacy concerns of a system  
@@ -116,7 +128,7 @@ Just before going to prison, he got married. He was in prison for 18 months, aft
 
 If you want to read a more detailed description of the episode, please read the summary below. If not, go to the [next topic](#security-hygiene)
 
-## Summary per topic
+## Description
   
   Silk Road = Online, anonymous market for illegal drugs  
 
@@ -212,7 +224,7 @@ If you want to read a more detailed description of the episode, please read the 
   - It's always better to double check with someone in person if they ask sensitive information through a digital channel. (e.g. IT asks for your password)
 
   # Make-belief boogie-man
-  
+
 
 
 # References
