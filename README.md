@@ -224,9 +224,91 @@ If you want to read a more detailed description of the episode, please read the 
   - It's always better to double check with someone in person if they ask sensitive information through a digital channel. (e.g. IT asks for your password)
 
   # Make-belief boogie-man
+  ## What are we working on?
+  ### Company
+  TechStore, an online webshop selling consumer electronics (computer components, laptops, etc.).  
+  Customers can browse products on the website. To order, they should be logged in. Orders are then processed through an e-commerce back-end. The products are then shipped from a warehouse. 
+
+  ### Key assets
+  - Customer data (names, addresses, emails, passwords, payment details)
+  - Webshop (website, shopping cart, products)
+  - Payment gateways (credit card, PayPal, ...)
+  - Order database
+  - Warehouse management system
+  - Employee data & admin dashboard (manage products, orders, refunds)
+  - Reputation
+
+  ## Customer interactions
+  - Customer interacts with webshop to browse and purchase products, and to interact with support.
+  - Payment page
+  - Order confirmation & shipping (email)
+
+  ### Crown jewels
+  - Secure payment and customer data
+  - Website uptime
+  - Order database **integrity** (nothing can be tampered with)
+  - Employee dashboard (controls most of the operations)
+
+  ### Sketch
+  <img src=./images/ThreatModel.drawio.png>
+
+  ## What can go wrong?
+  ### STRIDE
+  - **S**poofing
+    - Employee account can be hijacked
+    - Customer account can be hijacked
+  - **T**ampering
+    - Product catalog can be changed
+    - Products can be given a discount when it's not the intention
+    - Orders can be created when they haven't paid
+    - Orders from customers can be removed
+    - Customer data can be stolen
+    - Customer passwords can be stolen
+    - Employee data can be stolen
+    - Employee passwords can be stolen
+  - **R**epudiation
+    - There's no proof which employee changed what
+  - **D**oS
+    - The website is inaccessible due to an attack
+    - Payment processors are not working
+  - **E**levation of Priveleges
+    - Customer can access employee dashboard
+  
+  ### Biggest risks
+  - Leaking customer and employee data/passwords
+  - Employees accounts get compromised
+  - Order database gets corrupted
+  - Webshop is not working
+
+  ### Specific threat actors
+  This area is not high risk. The only reason to hack this company is because of monetary reasons.
+
+  ## What are we going to do about it?
+  1. Regular training for employees **mitigates** risk of loss of account.
+  2. Databases can't be accessed directly and every change is logged. This **transfers** responsibility to the employee changing orders or products. 
+  3. Employees can only access the customers account they are currently working on, which **mitigates** the risk of all customer data being leaked. 
+  4. HR will be moved to a seperate application to **eliminate** the risk of employee's data being leaked through our application.
+  5. We keep backups of the databases to **mitigate** the risk of all data being lost or corrupted.
+  6. Customers are solely responsible for the protection of their account. This **transfers** the responsibility to the customer.
+  7. Databases are seperated to **mitigate** the risk of all data being leaked at once. We **accept** that the data might get leaked at some point, but will **mitigate** the consequences.
+
+  ## Did we do a good enough job?
+  Cybersecurity gets a dedicated budget to make sure all operations are as secure as they can be. Security audits will be held regularly. All employees get trained.
+  
 
 
 
 # References
-Karvinen 2024: Information Security Course, https://terokarvinen.com/information-security/  
+- Conklin, L. (2022). *Threat Modeling Process | OWASP*. Owasp.org. https://owasp.org/www-community/Threat_Modeling_Process
 
+- *Information Security - 2025 early autumn - ICI002AS2AE-3007.* (2025). Terokarvinen.com. https://terokarvinen.com/information-security/
+
+- MyBib Contributors. (2019, May 26). *APA Citation Generator – FREE & Fast – (7th Edition, 2019)*. MyBib. https://www.mybib.com/tools/apa-citation-generator
+
+- OWASP. (2024). *Threat Modeling*. Cheatsheetseries.owasp.org. https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
+
+- *Sam the Vendor – Darknet Diaries*. (2023). Darknetdiaries.com. https://darknetdiaries.com/episode/132/
+
+- *Threat modeling manifesto* (n.d.). www.threatmodelingmanifesto.org. https://www.threatmodelingmanifesto.org/.
+
+- *World’s Shortest Threat Modeling Course*. (n.d.). YouTube. Retrieved June 12, 2025, from http://www.youtube.com/playlist?list=PLCVhBqLDKoOOZqKt74QI4pbDUnXSQo0nf
